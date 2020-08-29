@@ -10,6 +10,7 @@
 		7FA242A024FA496E00FD2386 /* DJB Get Digital.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FA2429F24FA48AB00FD2386 /* DJB Get Digital.ttf */; };
 		7FA242A624FA4A2C00FD2386 /* Makinas-4-Square.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7FA242A424FA49F300FD2386 /* Makinas-4-Square.otf */; };
 		7FA242A724FA4A3100FD2386 /* Makinas-4-Flat.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7FA242A524FA49FF00FD2386 /* Makinas-4-Flat.otf */; };
+		7FA242AB24FA967000FD2386 /* explosion.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7FA242AA24FA967000FD2386 /* explosion.mp4 */; };
 		B13D488D24FA3EBA009E4689 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13D488C24FA3EBA009E4689 /* AppDelegate.swift */; };
 		B13D488F24FA3EBA009E4689 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13D488E24FA3EBA009E4689 /* SceneDelegate.swift */; };
 		B13D489124FA3EBA009E4689 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13D489024FA3EBA009E4689 /* ContentView.swift */; };
@@ -29,6 +30,7 @@
 		7FA2429F24FA48AB00FD2386 /* DJB Get Digital.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DJB Get Digital.ttf"; sourceTree = "<group>"; };
 		7FA242A424FA49F300FD2386 /* Makinas-4-Square.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Makinas-4-Square.otf"; sourceTree = "<group>"; };
 		7FA242A524FA49FF00FD2386 /* Makinas-4-Flat.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Makinas-4-Flat.otf"; sourceTree = "<group>"; };
+		7FA242AA24FA967000FD2386 /* explosion.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = explosion.mp4; sourceTree = "<group>"; };
 		977549673DD3EAB10D94A3FC /* Pods-CocoaBomber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaBomber.debug.xcconfig"; path = "Target Support Files/Pods-CocoaBomber/Pods-CocoaBomber.debug.xcconfig"; sourceTree = "<group>"; };
 		B13D488924FA3EBA009E4689 /* CocoaBomber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaBomber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13D488C24FA3EBA009E4689 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		B13D488024FA3EBA009E4689 = {
 			isa = PBXGroup;
 			children = (
+				7FA242AA24FA967000FD2386 /* explosion.mp4 */,
 				B13D488B24FA3EBA009E4689 /* CocoaBomber */,
 				B13D488A24FA3EBA009E4689 /* Products */,
 				BE2A099E70E020DEABBAB3F5 /* Pods */,
@@ -196,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA242AB24FA967000FD2386 /* explosion.mp4 in Resources */,
 				7FA242A724FA4A3100FD2386 /* Makinas-4-Flat.otf in Resources */,
 				7FA242A624FA4A2C00FD2386 /* Makinas-4-Square.otf in Resources */,
 				7FA242A024FA496E00FD2386 /* DJB Get Digital.ttf in Resources */,

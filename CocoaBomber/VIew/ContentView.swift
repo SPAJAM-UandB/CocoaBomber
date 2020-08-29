@@ -9,15 +9,9 @@
 import SwiftUI
 
 struct ContentView: View {
+
     var body: some View {
-        VStack{
-            Text("Hello, World!")
-                .font(.custom("DJB Get Digital", size: 40))
-            Text("Hello, World!")
-                .font(.custom("Makinas-4-Square", size: 40))
-            Text("Hello, World!")
-                .font(.custom("Makinas-4-Flat", size: 40))
-        }
+        DefaultView()
     }
 }
 

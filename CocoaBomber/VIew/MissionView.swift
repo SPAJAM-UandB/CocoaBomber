@@ -10,7 +10,20 @@ import SwiftUI
 
 struct MissionView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { bodyView in
+            ZStack{
+                Image("black_back")
+                    .resizable()
+                    .frame(width: 500, height: 500, alignment: .center)
+                VStack{
+                    Text("MISSION")
+                    Text("START")
+                }
+                    .font(.custom("Makinas-4-Square", size: 30))
+                    .frame(width: 350, height: 100)
+                    .foregroundColor(Color.init(red: 57/255, green: 1, blue: 20/255))
+            }
+        }
     }
 }
 
