@@ -9,20 +9,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var cocoaViewModel: CocoaViewModel
+    
     var body: some View {
-        VStack{
-            Text("Hello, World!")
-                .font(.custom("DJB Get Digital", size: 40))
-            Text("Hello, World!")
-                .font(.custom("Makinas-4-Square", size: 40))
-            Text("Hello, World!")
-                .font(.custom("Makinas-4-Flat", size: 40))
+        if self.cocoaViewModel.mission_or_default {
+            return DefaultView()
+        } else {
+            return BombView()
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(CocoaViewModel())
     }
 }
