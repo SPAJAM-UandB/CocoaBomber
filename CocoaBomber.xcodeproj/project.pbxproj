@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7FA242A024FA496E00FD2386 /* DJB Get Digital.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FA2429F24FA48AB00FD2386 /* DJB Get Digital.ttf */; };
+		7FA242A624FA4A2C00FD2386 /* Makinas-4-Square.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7FA242A424FA49F300FD2386 /* Makinas-4-Square.otf */; };
+		7FA242A724FA4A3100FD2386 /* Makinas-4-Flat.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7FA242A524FA49FF00FD2386 /* Makinas-4-Flat.otf */; };
 		B13D488D24FA3EBA009E4689 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13D488C24FA3EBA009E4689 /* AppDelegate.swift */; };
 		B13D488F24FA3EBA009E4689 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13D488E24FA3EBA009E4689 /* SceneDelegate.swift */; };
 		B13D489124FA3EBA009E4689 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13D489024FA3EBA009E4689 /* ContentView.swift */; };
@@ -23,6 +26,9 @@
 /* Begin PBXFileReference section */
 		4C2DCEF3EAF8BE2C51520AD5 /* Pods-CocoaBomber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaBomber.release.xcconfig"; path = "Target Support Files/Pods-CocoaBomber/Pods-CocoaBomber.release.xcconfig"; sourceTree = "<group>"; };
 		5AD2945E8144BB7840CE540D /* Pods_CocoaBomber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocoaBomber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FA2429F24FA48AB00FD2386 /* DJB Get Digital.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DJB Get Digital.ttf"; sourceTree = "<group>"; };
+		7FA242A424FA49F300FD2386 /* Makinas-4-Square.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Makinas-4-Square.otf"; sourceTree = "<group>"; };
+		7FA242A524FA49FF00FD2386 /* Makinas-4-Flat.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Makinas-4-Flat.otf"; sourceTree = "<group>"; };
 		977549673DD3EAB10D94A3FC /* Pods-CocoaBomber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaBomber.debug.xcconfig"; path = "Target Support Files/Pods-CocoaBomber/Pods-CocoaBomber.debug.xcconfig"; sourceTree = "<group>"; };
 		B13D488924FA3EBA009E4689 /* CocoaBomber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocoaBomber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13D488C24FA3EBA009E4689 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +91,9 @@
 				B13D488E24FA3EBA009E4689 /* SceneDelegate.swift */,
 				B13D489224FA3EBB009E4689 /* Assets.xcassets */,
 				B13D489724FA3EBB009E4689 /* LaunchScreen.storyboard */,
+				7FA2429F24FA48AB00FD2386 /* DJB Get Digital.ttf */,
+				7FA242A424FA49F300FD2386 /* Makinas-4-Square.otf */,
+				7FA242A524FA49FF00FD2386 /* Makinas-4-Flat.otf */,
 				B13D489A24FA3EBB009E4689 /* Info.plist */,
 				B13D489424FA3EBB009E4689 /* Preview Content */,
 			);
@@ -124,7 +133,6 @@
 				977549673DD3EAB10D94A3FC /* Pods-CocoaBomber.debug.xcconfig */,
 				4C2DCEF3EAF8BE2C51520AD5 /* Pods-CocoaBomber.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -188,6 +196,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA242A724FA4A3100FD2386 /* Makinas-4-Flat.otf in Resources */,
+				7FA242A624FA4A2C00FD2386 /* Makinas-4-Square.otf in Resources */,
+				7FA242A024FA496E00FD2386 /* DJB Get Digital.ttf in Resources */,
 				B13D489924FA3EBB009E4689 /* LaunchScreen.storyboard in Resources */,
 				B13D489624FA3EBB009E4689 /* Preview Assets.xcassets in Resources */,
 				B13D489324FA3EBB009E4689 /* Assets.xcassets in Resources */,
@@ -388,14 +399,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CocoaBomber/Preview Content\"";
-				DEVELOPMENT_TEAM = 7ZJJ7KR6WA;
+				DEVELOPMENT_TEAM = RZ6XSHJ4QR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CocoaBomber/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rei.nakaoka.CocoaBomber;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuma.sato.CocoaBomber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -409,14 +420,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CocoaBomber/Preview Content\"";
-				DEVELOPMENT_TEAM = 7ZJJ7KR6WA;
+				DEVELOPMENT_TEAM = RZ6XSHJ4QR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CocoaBomber/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rei.nakaoka.CocoaBomber;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yuma.sato.CocoaBomber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
