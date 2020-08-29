@@ -9,14 +9,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var cocoaViewModel: CocoaViewModel
-    
+
     var body: some View {
-        if self.cocoaViewModel.mission_or_default {
-            return DefaultView()
-        } else {
-            return BombView()
-        }
+        DefaultView()
+
     }
 }
 
