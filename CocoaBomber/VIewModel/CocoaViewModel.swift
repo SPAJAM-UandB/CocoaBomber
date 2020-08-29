@@ -12,9 +12,11 @@ import SocketIO
 class CocoaViewModel: ObservableObject{
     @Published var all_num: Int = 0
     @Published var cocoa_num: Int = 0
-    @Published var time: Int = 0
+    @Published var time: Double = 0.00
     @Published var mission_or_default: Bool = false
     @Published var clear_flag: Bool = false
+    @Published var start_flag: Bool = false
+    @Published var alert_flag: Bool = false
     var manager: SocketManager!
     var socket: SocketIOClient!
     
@@ -51,8 +53,10 @@ class CocoaViewModel: ObservableObject{
             let dict = self.convertToDictionary(text: dict_string)
             self.all_num = dict!["all_person"]! as! Int
             self.cocoa_num = dict!["cocoa_person"]! as! Int
-            self.time = dict!["time"]! as! Int
+            self.time = dict!["time"]! as! Double
             self.clear_flag = false
+            self.start_flag = true
+            self.alert_flag = true
             //print(type(of: data[0]))
             //print(data[0])
 

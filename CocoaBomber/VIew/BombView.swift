@@ -27,15 +27,15 @@ struct BombView: View {
     @State var strbomb_timer_r = "0"
     @State var num = 1
     @State var all = 4
-    @Binding var alertw: Bool
+    @EnvironmentObject var cocoaViewModel: CocoaViewModel
     
     
     func bomb_timer_calc(){
-        intbomb_timer = Int(bomb_timer)
-        intbomb_timer_r = Int(100.0*(bomb_timer - Double(intbomb_timer)))
-        bomb_timer_m = self.bomb_timer/60.0
+        intbomb_timer = Int(self.cocoaViewModel.time)
+        intbomb_timer_r = Int(100.0*(self.cocoaViewModel.time - Double(intbomb_timer)))
+        bomb_timer_m = self.cocoaViewModel.time/60.0
         intbomb_timer_m = Int(bomb_timer_m)
-        bomb_timer_s = bomb_timer - 60*Double(intbomb_timer_m)
+        bomb_timer_s = self.cocoaViewModel.time - 60*Double(intbomb_timer_m)
         intbomb_timer_s = Int(bomb_timer_s)
         
         strbomb_timer_m = String(format:"%02d", intbomb_timer_m)
@@ -57,9 +57,16 @@ struct BombView: View {
                 Image("black_back")
                     .resizable()
                     .frame(width: bodyView.size.width, height: bodyView.size.height, alignment: .topLeading)
-                    .scaledToFill()
+                    .scaledToFit()
                     .edgesIgnoringSafeArea(.all)
+                Spacer()
                 VStack{
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
                     Spacer()
                     Text("MISSION")
                         .font(.custom("Makinas-4-Square", size: 50))
@@ -71,20 +78,22 @@ struct BombView: View {
                     ZStack{
                         Image("ironmat")
                             .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .edgesIgnoringSafeArea(.all)
                             .scaledToFill()
-                            .frame(width: 0, height: 480, alignment: .bottom)
+                            .frame(width: 0, height: 700, alignment: .bottom)
                         Circle()
-                            .frame(width: 90, height: 120)
-                            .position(x:340, y:400)
-                        Text("\(self.num)/\(self.all)")
-                            .font(.custom("Makinas-4-Square", size: 30))
+                            .frame(width: 150, height: 150)
+                            .position(x:330, y:540)
+                        Text("\(self.cocoaViewModel.cocoa_num)/\(self.cocoaViewModel.all_num)")
+                            .font(.custom("Makinas-4-Square", size: 50))
                             .foregroundColor(.red)
-                            .position(x:340, y:400)
+                            .position(x:330, y:540)
                         Image("bomb")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 480, height: 480)
-                            .position(x:230, y:200)
+                            .position(x:230, y:300)
                             .scaleEffect(self.beat ? 1 : 1.1)
                             .animation(.easeInOut(duration: 0.5))
                             .onReceive(self.timer){_ in
@@ -99,37 +108,31 @@ struct BombView: View {
                             .font(.custom("DJB Get Digital", size: 50))
                             .foregroundColor(.red)
                     }
+                    
                 }
                 .onReceive(self.timer2){_ in
                     self.count += 1
-                    if self.bomb_timer > 0 {
-                        self.bomb_timer -= 0.01
+                    if self.cocoaViewModel.time > 0 {
+                        self.cocoaViewModel.time -= 0.01
                         self.bomb_timer_calc()
                     }
                 }
-                if self.bomb_timer < 0{
+                if self.cocoaViewModel.time < 0{
                     Image("black_back")
                         .resizable()
                         .frame(width: bodyView.size.width, height: bodyView.size.height, alignment: .topLeading)
                         .scaledToFill()
                         .edgesIgnoringSafeArea(.all)
-//                    Button(action: {
-//                        self.alertw.toggle()
-//                    }) {
-//                        Text("戻る")
-//                            .foregroundColor(.green)
-//                            .frame(width: 80, height: 80)
-//                    }
                     MovieView()
-                    
                 }
-//                    Alert(title: Text("Warning!!"), message: Text("Mission!"), dismissButton: .default(Text("Go!")))
-//                }
             }
+            Image("black_back")
+                .resizable()
+                .frame(width: bodyView.size.width, height: bodyView.size.height, alignment: .topLeading)
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
+            MovieView()
         }
-//        .alert(isPresented: $alert_toggle){
-//            Alert(title: Text("a"), message: Text("a"), dismissButton: .default(Text("a")))
-//        }
     }
 }
 
@@ -182,6 +185,6 @@ avPlayerLayer.frame = bounds
 
 struct BombView_Previews: PreviewProvider {
     static var previews: some View {
-        BombView(alertw: .constant(true))
+        BombView().environmentObject(CocoaViewModel())
     }
 }
