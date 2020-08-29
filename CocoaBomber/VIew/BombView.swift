@@ -14,7 +14,7 @@ struct BombView: View {
     @State var alert_toggle = true
     @State var count = 0
     @State var currentDate = Date()
-    @State var bomb_timer = 2.99
+    @State var bomb_timer = 180.00
     @State var bomb_timer2 = 4.99
     @State var intbomb_timer = 100
     @State var bomb_timer_m = 0.0
@@ -25,8 +25,8 @@ struct BombView: View {
     @State var strbomb_timer_s = "0"
     @State var intbomb_timer_r = 0
     @State var strbomb_timer_r = "0"
-    @State var num = 3
-    @State var all = 10
+    @State var num = 1
+    @State var all = 4
     @Binding var alertw: Bool
     
     
