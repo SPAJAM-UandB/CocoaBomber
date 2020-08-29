@@ -12,11 +12,12 @@ struct ContentView: View {
 
     var body: some View {
         DefaultView()
+
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(CocoaViewModel())
     }
 }
