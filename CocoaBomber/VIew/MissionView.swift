@@ -14,12 +14,14 @@ struct MissionView: View {
             ZStack{
                 Image("black_back")
                     .resizable()
-                    .frame(width: 500, height: 500, alignment: .center)
+                    .aspectRatio(contentMode: .fill)
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.all)
                 VStack{
-                    Text("MISSION")
-                    Text("START")
+                    Text("GAME")
+                    Text("CLEAR")
                 }
-                    .font(.custom("Makinas-4-Square", size: 30))
+                    .font(.custom("Makinas-4-Square", size: 60))
                     .frame(width: 350, height: 100)
                     .foregroundColor(Color.init(red: 57/255, green: 1, blue: 20/255))
             }
