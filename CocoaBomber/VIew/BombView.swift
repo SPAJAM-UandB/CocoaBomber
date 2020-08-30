@@ -48,7 +48,7 @@ struct BombView: View {
         
     }
     
-    let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 1.0, on: .main, in: .common).autoconnect()
     let timer2 = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
     
     var body: some View {
@@ -95,7 +95,7 @@ struct BombView: View {
                             .frame(width: 480, height: 480)
                             .position(x:230, y:300)
                             .scaleEffect(self.beat ? 1 : 1.1)
-                            .animation(.easeInOut(duration: 0.5))
+                            .animation(.easeInOut(duration: 1.0))
                             .onReceive(self.timer){_ in
                                 self.beat.toggle()
                             }
@@ -124,14 +124,16 @@ struct BombView: View {
                         .scaledToFill()
                         .edgesIgnoringSafeArea(.all)
                     MovieView()
+                } else if self.cocoaViewModel.clear_flag {
+                    MissionView()
                 }
             }
-            Image("black_back")
-                .resizable()
-                .frame(width: bodyView.size.width, height: bodyView.size.height, alignment: .topLeading)
-                .scaledToFill()
-                .edgesIgnoringSafeArea(.all)
-            MovieView()
+//            Image("black_back")
+//                .resizable()
+//                .frame(width: bodyView.size.width, height: bodyView.size.height, alignment: .topLeading)
+//                .scaledToFill()
+//                .edgesIgnoringSafeArea(.all)
+//            MovieView()
         }
     }
 }
