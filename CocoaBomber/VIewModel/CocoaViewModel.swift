@@ -44,7 +44,9 @@ class CocoaViewModel: ObservableObject{
             print(self.time)
             print("Message received")
             if self.cocoa_num == self.all_num {
-                self.clear_flag = true
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    self.clear_flag = true
+                }
             }
         }
         
