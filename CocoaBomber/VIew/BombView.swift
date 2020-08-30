@@ -94,9 +94,9 @@ struct BombView: View {
                             .scaledToFit()
                             .frame(width: 480, height: 480)
                             .position(x:230, y:300)
-                            .scaleEffect(self.beat ? 1 : 1.1)
-                            .animation(.easeInOut(duration: 1.0))
-                            .onReceive(self.timer){_ in
+                            .scaleEffect(self.beat ? 1 : 1.2)
+                            .animation(.easeInOut(duration: 0.1))
+                            .onReceive(self.timer2){_ in
                                 self.beat.toggle()
                             }
                         Rectangle()
