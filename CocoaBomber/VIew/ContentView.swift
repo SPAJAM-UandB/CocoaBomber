@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var cocoaViewModel: CocoaViewModel
 
     var body: some View {
         DefaultView()

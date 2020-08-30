@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct DefaultView: View {
+    @EnvironmentObject var cocoaViewModel: CocoaViewModel
     @State var alert_toggle = true
 //    let alert: UIAlertController = UIAlertController(
 //        title: "WARNING!!",
@@ -62,12 +63,12 @@ struct DefaultView: View {
                     
                 }
             }
-            .alert(isPresented: $alert_toggle){
+            .alert(isPresented: $cocoaViewModel.start_flag){
                 Alert(title: Text("Waring!!"), message: Text("MISSION START"), dismissButton: .default(Text("Go!")))
             }
             
-            if !alert_toggle {
-                BombView(alertw: $alert_toggle)
+            if !cocoaViewModel.start_flag && cocoaViewModel.alert_flag{
+                BombView()
             }
         }
     }
@@ -76,6 +77,6 @@ struct DefaultView: View {
 
 struct DefaultView_Previews: PreviewProvider {
     static var previews: some View {
-        DefaultView()
+        DefaultView().environmentObject(CocoaViewModel())
     }
 }
