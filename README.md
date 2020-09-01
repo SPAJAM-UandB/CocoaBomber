@@ -6,7 +6,7 @@ SPAJAMのU&B開発物．みんなにCOCOAを入れさせるゲーム．
 # 概要
 
 ラズパイで周辺のCOCOAをイントールしているスマホの割合を検出し，スマホ側に送信．突然，周辺の人に「Cocoaを入れさせろ」というミッションがスタート．全員に入れたことが確認されるとゲームクリア．
-![概要](img/overrall.png)
+![概要](img/cocoabomber_overrall.png)
 ![スクショ](img/screenshot.png)
 
 # 使用技術
