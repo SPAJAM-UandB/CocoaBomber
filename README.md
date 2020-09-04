@@ -18,3 +18,4 @@ SPAJAMのU&B開発物．みんなにCOCOAを入れさせるゲーム．
 
 * [発表スライド](img/cocoa.pdf)
 * [COCOAリンク](https://apps.apple.com/jp/app/cocoa-%E6%96%B0%E5%9E%8B%E3%82%B3%E3%83%AD%E3%83%8A%E3%82%A6%E3%82%A4%E3%83%AB%E3%82%B9%E6%8E%A5%E8%A7%A6%E7%A2%BA%E8%AA%8D%E3%82%A2%E3%83%97%E3%83%AA/id1516764458)
+* [デモ動画](https://www.youtube.com/watch?v=7lJf296V1sA&feature=youtu.be)
